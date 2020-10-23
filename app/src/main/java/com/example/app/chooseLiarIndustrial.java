@@ -23,5 +23,4 @@ public class chooseLiarIndustrial extends AppCompatActivity {
         Intent intentLogeadoWithIndu = new Intent (this, insideApp.class);
         startActivity(intentLogeadoWithIndu);
     }
-
 }

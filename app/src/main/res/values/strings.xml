@@ -30,4 +30,9 @@
     <string name="fotoTabacoIndustrial"></string>
 
 
+    <!--- Activity choose tabaco   -->
+    <string name="tituloQueTabacoEscoger">What tobacco do you smoke?</string>
+
+
+
 </resources>
