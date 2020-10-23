@@ -22,5 +22,12 @@
     <string name="registerPagePassword">Password</string>
     <string name="buttonRegisterUser">Registrarse!</string>
 
+    <!--- Activity choose liar/industrial   -->
+    <string name="tabacoDeLiar">TABACO DE LIAR</string>
+    <string name="tabacoIndustrial">TABACO INDUSTRIAL</string>
+
+    <string name="fotoTabacoDeLiar"></string>
+    <string name="fotoTabacoIndustrial"></string>
+
 
 </resources>
