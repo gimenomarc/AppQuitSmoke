@@ -7,17 +7,39 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-    private FloatingActionButton floatingActionButton;
+
+
+    //private FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+        final EditText datoUsuario = findViewById(R.id.nameLogin);
+        final EditText datoPassword = findViewById(R.id.passwordLogin);
+
+        TextView botonIniciarSesion = findViewById(R.id.botonSignIn);
+        botonIniciarSesion.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                functionLoginIn(v, datoUsuario, datoPassword);
+            }
+        });
+
+
+
+
     }
 
     public void changeActivityRegistrarse(View view) {
@@ -50,7 +72,20 @@ public class MainActivity extends AppCompatActivity {
         startActivity(twitterIntent);
     }
 
+    public void intentTerminosCondiciones (View v) {
+        Intent intentTerminos = new Intent (this, terminos_condiciones.class);
+        startActivity(intentTerminos);
+    }
 
+    public void functionLoginIn(View v, EditText datosUsuario, EditText datosPassword){
+        Intent intentLogin = new Intent(this, insideApp.class);
+        BaseDeDatos bd = new BaseDeDatos( this, "android", null, 1);
+        List<Usuario> listaUsuarios = bd.getData();
 
-
+        for (int i = 0; i < listaUsuarios.size(); i++) {
+            System.out.println(listaUsuarios.get(i));
+            if (datosUsuario.getText().toString().equals(listaUsuarios.get(i).getNombre()) && datosPassword.getText().toString().equals(listaUsuarios.get(i).getPassword()))
+            startActivity(intentLogin);
+        }
+    }
 }

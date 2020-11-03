@@ -8,8 +8,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="366dp"
-        android:layout_height="490dp"
+        android:layout_width="356dp"
+        android:layout_height="450dp"
         app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,6 +35,7 @@
                 android:text="@string/registerPage"
                 android:textAlignment="center"
                 android:textSize="25dp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,6 +44,7 @@
                 android:layout_marginRight="10dp"
                 android:hint="@string/registerPageUsername">
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/usernameRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
@@ -59,6 +61,7 @@
                 android:layout_marginRight="10dp"
                 android:hint="@string/registerPageName">
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinsmedium" />
@@ -74,6 +77,7 @@
                 android:layout_marginRight="10dp"
                 android:hint="@string/registerPageSurname">
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/surnameRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinsmedium" />
@@ -88,6 +92,7 @@
                 android:layout_marginRight="10dp"
                 android:hint="@string/registerPagePassword">
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinsmedium" />
@@ -103,6 +108,7 @@
                 android:layout_marginRight="10dp"
                 android:hint="@string/registerPageEmail">
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinsmedium" />
@@ -131,22 +137,31 @@
             </RelativeLayout>
         </LinearLayout>
 
+
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/buttonUserRegistrado"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppinsbold"
-        android:gravity="center"
-        android:text="@string/buttonRegisterUser"
-        android:textColor="#000000"
-        android:textSize="22dp"
-        android:onClick="functionUserRegistrado"
-        android:layout_marginTop="10dp"
+        android:text="@string/buttonRegister"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:onClick="functionUserRegistrado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUserRegistrado"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

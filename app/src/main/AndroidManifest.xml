@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".insideApp"></activity>
+        <activity android:name=".terminos_condiciones"></activity>
+        <activity android:name=".insideApp" />
         <activity android:name=".chooseLiarIndustrial" />
         <activity android:name=".ActivityRegister" />
         <activity android:name=".MainActivity">
