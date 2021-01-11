@@ -1,73 +1,76 @@
 package com.example.app;
 
 public class Usuario {
-    private int id;
-    private String nombre;
-    private String apellido;
-    private String nombreUsuario;
-    private String password;
-    private String email;
+    int id;
+    String Nombre, Usuario, Password, Email;
 
+    public Usuario() {
+    }
 
-    public Usuario(int id, String nombre, String apellido, String nombreUsuario, String password, String email) {
+    public Usuario(int id, String nombre, String usuario, String password, String email) {
         this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.nombreUsuario = nombreUsuario;
-        this.password = password;
-        this.email = email;
+        Nombre = nombre;
+        Usuario = usuario;
+        Password = password;
+        Email = email;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
-
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public boolean isNull() {
+        if(Nombre.equals("")&&Usuario.equals("")&&Password.equals("")&&Email.equals("")){
+            return false;
+        }else{
+            return true;
+        }
     }
 
     @Override
     public String toString() {
         return "Usuario{" +
                 "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", nombreUsuario='" + nombreUsuario + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
+                ", nombre='" + Nombre + '\'' +
+                ", Usuario='" + Usuario + '\'' +
+                ", password='" + Password + '\'' +
+                ", email='" + Email + '\'' +
                 '}';
     }
-}
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String nombre) {
+        Nombre = nombre;
+    }
+
+    public String getUsuario() {
+        return Usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        Usuario = usuario;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+}

@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="350dp"
-        android:layout_height="310dp"
+        android:layout_height="290dp"
         app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,11 +42,10 @@
                 android:hint="@string/Username">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/nameLogin"
+                    android:id="@+id/textUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:drawableEnd="@drawable/user_vector"/>
+                    android:fontFamily="@font/poppinsmedium" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -57,39 +56,22 @@
                 android:hint="@string/Password">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/passwordLogin"
+                    android:id="@+id/textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:drawableEnd="@drawable/candado_vector"
-                    />
+                    android:fontFamily="@font/poppinsmedium" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/poppinsmedium"
-                android:gravity="start"
+                android:gravity="end"
                 android:text="@string/forgotPassword"
                 android:textColor="#3F51B5" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginLeft="20dp"
-                android:onClick="intentTerminosCondiciones"
-                android:layout_marginTop="5dp"
-                android:text="@string/terminosCondiciones" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:text="@string/rememberMe" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -98,25 +80,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textAlignment="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/rememberMe" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            >
+
             <TextView
-                android:id="@+id/botonSignIn"
+                android:id="@+id/btnIniciarSesion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="50dp"
                 android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
                 android:text="@string/signIn"
-                android:onClick="functionLoginIn"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                tools:ignore="OnClick" />
+                android:textColor="#000000"
+                android:textSize="22dp" />
+
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -139,11 +137,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
             android:fontFamily="@font/poppinsmedium"
             android:text="@string/quitSmoking"
-            android:textSize="15dp" />
+            android:textSize="17dp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -152,53 +150,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:onClick="intentFacebook"
-            android:src="@drawable/fb" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="intentGoogle"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/g" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="intentLinkedin"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/in" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="intentTwitter"
-            android:src="@drawable/tw" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <TextView
             android:layout_width="wrap_content"
@@ -207,14 +166,17 @@
             android:text="@string/newUser" />
 
         <TextView
+            android:id="@+id/btnRegistrarse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppinsmedium"
-            android:text="@string/register"
             android:layout_marginLeft="5dp"
-            android:onClick="changeActivityRegistrarse"
+            android:fontFamily="@font/poppinsmedium"
+            android:onClick="intentTest"
+            android:text="@string/register"
             android:textColor="#3F51B5" />
 
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

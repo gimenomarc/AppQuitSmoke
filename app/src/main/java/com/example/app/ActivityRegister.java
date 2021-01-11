@@ -7,46 +7,64 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class ActivityRegister extends AppCompatActivity {
-
-    EditText nombre;
-    EditText apellido;
-    EditText nombreUsuario;
-    EditText password;
-    EditText email;
-    Button register;
-
+public class ActivityRegister extends AppCompatActivity implements View.OnClickListener{
+    EditText us, pass, nom, email;
+    TextView reg;
+    daoUsuario dao;
+    Button can;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        nombre = findViewById(R.id.nameRegister);
-        apellido = findViewById(R.id.surnameRegister);
-        nombreUsuario = findViewById(R.id.usernameRegister);
-        password = findViewById(R.id.passwordRegister);
-        email = findViewById(R.id.emailRegister);
-        
-        register = findViewById(R.id.buttonUserRegistrado);
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                registerUser();
-            }
-        });
-    }
-
-    private void registerUser() {
-        BaseDeDatos bd = new BaseDeDatos(this, "android", null, 1);
-        bd.insertData(nombre.getText().toString(),apellido.getText().toString(),nombreUsuario.getText().toString(),password.getText().toString(),email.getText().toString());
-        bd.getData();
+        nom = (EditText) findViewById(R.id.usernameID);
+        us = (EditText) findViewById(R.id.nameID);
+        pass = (EditText) findViewById(R.id.passwordID);
+        email = (EditText) findViewById(R.id.emailID);
+        reg = (TextView) findViewById(R.id.textRegistrarse);
+        can = (Button) findViewById(R.id.btnRegCancelar);
+        reg.setOnClickListener(this);
+        can.setOnClickListener(this);
+        dao = new daoUsuario(this);
     }
 
 
     public void functionUserRegistrado (View v){
-        Intent intentUserRegister = new Intent (this, chooseLiarIndustrial.class);
+        Intent intentUserRegister = new Intent (this, menuPrincipal.class);
         startActivity(intentUserRegister);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch ( v.getId() ){
+            case R.id.textRegistrarse:
+                Usuario u = new Usuario();
+                u.setUsuario(us.getText().toString());
+                u.setPassword(pass.getText().toString());
+                u.setNombre(nom.getText().toString());
+                u.setEmail(email.getText().toString());
+                if(!u.isNull()) {
+                    Toast.makeText(this, "ERROR: Campos vacios.", Toast.LENGTH_LONG).show();
+                }else if (dao.insertUsuario(u)) {
+                    Toast.makeText(this, "Registrado.", Toast.LENGTH_LONG).show();
+                    Intent i2 = new Intent (this, MainActivity.class);
+                    startActivity(i2);
+                    finish();
+                } else {
+                    Toast.makeText(this, "Usuario ya registrado.", Toast.LENGTH_LONG).show();
+
+                }
+
+                Intent iLog = new Intent (this, menuPrincipal.class);
+                break;
+            case R.id.btnRegCancelar:
+                Intent i = new Intent (this, MainActivity.class);
+                startActivity(i);
+                finish();
+                break;
+        }
     }
 }
