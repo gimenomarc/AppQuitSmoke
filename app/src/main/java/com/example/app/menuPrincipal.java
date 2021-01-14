@@ -23,8 +23,8 @@ import org.w3c.dom.Text;
 
 public class menuPrincipal extends AppCompatActivity implements View.OnClickListener{
 
-    Button buttonTest;
-    TextView nombre;
+    Button buttonTest, buttonCalculate;
+    TextView nombre, logout;
     int id = 0;
     Usuario u;
     daoUsuario dao;
@@ -36,6 +36,11 @@ public class menuPrincipal extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
         nombre = (TextView) findViewById(R.id.textTitleName);
+        logout = (TextView) findViewById(R.id.textLogOut);
+        buttonCalculate = (Button) findViewById(R.id.btnCalculate);
+
+        logout.setOnClickListener(this);
+        buttonCalculate.setOnClickListener(this);
 
         Spinner spinnerTabIndustrial = (Spinner) findViewById(R.id.spinnerIndu);
         String[] valores = {"Marlboro", "Winston","Ducado","Camel"};
@@ -46,11 +51,8 @@ public class menuPrincipal extends AppCompatActivity implements View.OnClickList
         spinnerTabLiar.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valores2));
 
         Spinner spinnerHowMuch = (Spinner) findViewById(R.id.spinnerHowMany);
-        String[] valoresNum = { "1","2","3","4" };
+        String[] valoresNum = { "1","2","3","4", "5", "6", "7", "8", "9", "10", "11", "12" };
         spinnerHowMuch.setAdapter((new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valoresNum)));
-
-
-
 
         // buttonTest = (Button) findViewById(R.id.btnTest);
         //  btnCerrarsesion = (Button) findViewById(R.id.btnLogut);
@@ -58,9 +60,6 @@ public class menuPrincipal extends AppCompatActivity implements View.OnClickList
         //  btnEliminar = (Button) findViewById(R.id.btn);
         //  btnMostrar = (Button) findViewById(R.id.btn);
 
-
-
-        //Nombre = nombreUsuario
         Bundle b = getIntent().getExtras();
         id = b.getInt("id");
         dao = new daoUsuario(this);
@@ -89,6 +88,14 @@ public class menuPrincipal extends AppCompatActivity implements View.OnClickList
                 //Intent intentTest = new Intent (this, SlashScreen.class);
                 //startActivity(intentTest);
                 break;
+
+            case R.id.textLogOut:
+                Intent i1 = new Intent (this, MainActivity.class);
+                startActivity(i1);
+
+            case R.id.btnCalculate:
+                Intent i2 = new Intent (this, CalculoActivity.class);
+                startActivity(i2);
         }
     }
 }

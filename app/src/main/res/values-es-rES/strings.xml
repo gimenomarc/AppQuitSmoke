@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App</string>
+    <string name="Username">Nombre usuario</string>
+    <string name="Password">Contraseña</string>
+    <string name="forgotPassword">Has olvidado la contraseña?</string>
+    <string name="rememberMe">Recuerdame</string>
+    <string name="signIn">Iniciar sesión</string>
+    <string name="quitSmoking">Quieres dejar de fumar?</string>
+    <string name="newUser">Eres nuevo?</string>
+    <string name="register">Registrate</string>
+    <string name="registerPage">Registrate</string>
+    <string name="registerPageUsername">Nombre de usuario</string>
+    <string name="registerPageName">Nombre</string>
+    <string name="registerPageSurname">Apellido</string>
+    <string name="registerPageEmail">Email</string>
+    <string name="registerPagePassword">Contraseña</string>
+    <string name="buttonRegisterUser">Iniciar sesión</string>
+    <string name="bienvenidoUser">Bienvenido</string>
+    <string name="ajustes">Configuración</string>
+    <string name="mensajeBienvenidaUser">Bienvenido</string>
+    <string name="logoutText">Cerrar sesión</string>
+    <string name="menuProfile">Perfil</string>
+    <string name="menuSettings">Ajustes</string>
+    <string name="menuConfiguration">Configuración</string>
+    <string name="menuPrivacity">Pirvacidad</string>
+    <string name="menuTermsConditions">Términos y condiciones</string>
+    <string name="menuAboutUs">Acerca de</string>
+    <string name="verificated">Verificado</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="textChooseTabac">Que tabaco fumas?</string>
+    <string name="textHowMuchDoUSmoke">Cuanto fumas?</string>
+    <string name="btnCalcular">Calcula</string>
+    <string name="textHowMuch">Cuantos cigarros fumas al dia?</string>
+</resources>

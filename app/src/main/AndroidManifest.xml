@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".calculo"></activity>
+        <activity android:name=".CalculoActivity"></activity>
         <activity android:name=".SlashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
         <activity android:name=".menuPrincipal" />
         <activity android:name=".insideApp" />
         <activity android:name=".ActivityRegister" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

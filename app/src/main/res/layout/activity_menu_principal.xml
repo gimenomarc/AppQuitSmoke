@@ -67,29 +67,29 @@
 
         <Spinner
             android:id="@+id/spinnerIndu"
-            android:layout_width="800px"
+            android:layout_width="600px"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             app:layout_constraintBottom_toTopOf="@+id/textLogOut"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintHorizontal_bias="0.68"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textChooseTabac"
-            app:layout_constraintVertical_bias="0.07999998"
+            app:layout_constraintVertical_bias="0.141"
             tools:ignore="MissingConstraints" />
 
         <Spinner
             android:id="@+id/spinnerLiar"
-            android:layout_width="800px"
+            android:layout_width="600px"
             android:layout_height="wrap_content"
             android:layout_marginBottom="316dp"
             android:textAlignment="center"
             app:layout_constraintBottom_toTopOf="@+id/textLogOut"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.877"
+            app:layout_constraintHorizontal_bias="0.68"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinnerIndu"
-            app:layout_constraintVertical_bias="0.202"
+            app:layout_constraintVertical_bias="0.529"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -107,8 +107,7 @@
         <Spinner
             android:id="@+id/spinnerHowMany"
             android:layout_width="800px"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
+            android:layout_height="wrap_content"            android:textAlignment="center"
             app:layout_constraintBottom_toTopOf="@+id/textLogOut"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +124,29 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinnerHowMany"
-            app:layout_constraintVertical_bias="0.45" />
+            app:layout_constraintVertical_bias="0.455" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="52dp"
+            android:layout_height="73dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerLiar"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerIndu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textChooseTabac"
+            app:srcCompat="@drawable/ind" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="52dp"
+            android:layout_height="61dp"
+            app:layout_constraintBottom_toTopOf="@+id/cantidadTabaco"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerLiar"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.26999998"
+            app:srcCompat="@drawable/indu_t" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

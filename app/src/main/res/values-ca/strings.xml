@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App</string>
+    <string name="Username">Nom Usuari</string>
+    <string name="Password">Contrasenya</string>
+    <string name="forgotPassword">Has olvidat la contrasenya?</string>
+    <string name="rememberMe">Recordem</string>
+    <string name="signIn">Iniciar sessió</string>
+    <string name="quitSmoking">Vols deixar de fumar?</string>
+    <string name="newUser">Nou usuari?</string>
+    <string name="register">Registrat</string>
+    <string name="registerPage">Registrat</string>
+    <string name="registerPageUsername">Nom d\'usuari</string>
+    <string name="registerPageName">Nom</string>
+    <string name="registerPageSurname">Cognom</string>
+    <string name="registerPageEmail">Email</string>
+    <string name="registerPagePassword">Contrasenya</string>
+    <string name="buttonRegisterUser">Inicia sessió!</string>
+    <string name="bienvenidoUser">"Benvingut "</string>
+    <string name="ajustes">Configuració</string>
+    <string name="mensajeBienvenidaUser">Benvingut</string>
+    <string name="logoutText">Tancar sessió</string>
+    <string name="menuProfile">Perfil</string>
+    <string name="menuSettings">Ajustos</string>
+    <string name="menuConfiguration">Configuració</string>
+    <string name="menuPrivacity">Privacitat</string>
+    <string name="menuTermsConditions">Terminis i condicións</string>
+    <string name="menuAboutUs">Sobre nosaltres</string>
+    <string name="verificated">Verificat</string>
+    <string name="notifications">Notificacions</string>
+    <string name="textChooseTabac">Quin tabac fumes?</string>
+    <string name="textHowMuchDoUSmoke">Quants fumes al dia?</string>
+    <string name="btnCalcular">Calcula</string>
+    <string name="textHowMuch">Quants fumes al dia?</string>
+    <string name="Iniciar sessió">Iniciar sessií</string>
+</resources>
