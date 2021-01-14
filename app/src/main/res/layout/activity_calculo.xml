@@ -7,6 +7,10 @@
     android:orientation="vertical"
     tools:context=".calculo">
 
+    <ScrollView
+        android:layout_width="350dp"
+        android:layout_height="400dp">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/tabaco1"
         android:layout_width="match_parent"
@@ -17,6 +21,8 @@
         android:foreground="?android:attr/selectableItemBackground"
         app:cardCornerRadius="5dp"
         app:cardUseCompatPadding="true">
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -82,45 +88,8 @@
             android:text="TABACO"
             android:textColor="#000"
             android:textSize="18sp" />
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/tabaco5"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="5dp"
-        app:cardUseCompatPadding="true">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="TABACO"
-            android:textColor="#000"
-            android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/tabaco6"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="5dp"
-        app:cardUseCompatPadding="true">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="TABACO"
-            android:textColor="#000"
-            android:textSize="18sp" />
-    </androidx.cardview.widget.CardView>
+    </ScrollView>
 
 </LinearLayout>

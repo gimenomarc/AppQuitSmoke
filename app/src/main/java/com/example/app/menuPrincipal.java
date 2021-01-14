@@ -10,8 +10,11 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -20,11 +23,12 @@ import org.w3c.dom.Text;
 
 public class menuPrincipal extends AppCompatActivity implements View.OnClickListener{
 
-    Button btnEditar, btnEliminar, btnMostrar, btnCerrarsesion;
-    TextView nombre, btnSalir;
+    Button buttonTest;
+    TextView nombre;
     int id = 0;
     Usuario u;
     daoUsuario dao;
+
 
 
     @Override
@@ -32,7 +36,23 @@ public class menuPrincipal extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
         nombre = (TextView) findViewById(R.id.textTitleName);
-        btnSalir = (TextView) findViewById(R.id.textLogOut);
+
+        Spinner spinnerTabIndustrial = (Spinner) findViewById(R.id.spinnerIndu);
+        String[] valores = {"Marlboro", "Winston","Ducado","Camel"};
+        spinnerTabIndustrial.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valores));
+
+        Spinner spinnerTabLiar = (Spinner) findViewById(R.id.spinnerLiar);
+        String[] valores2 = {"Pueblo", "Sauvage", "Flandria"};
+        spinnerTabLiar.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valores2));
+
+        Spinner spinnerHowMuch = (Spinner) findViewById(R.id.spinnerHowMany);
+        String[] valoresNum = { "1","2","3","4" };
+        spinnerHowMuch.setAdapter((new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valoresNum)));
+
+
+
+
+        // buttonTest = (Button) findViewById(R.id.btnTest);
         //  btnCerrarsesion = (Button) findViewById(R.id.btnLogut);
         //  btnEditar = (Button) findViewById(R.id.btn);
         //  btnEliminar = (Button) findViewById(R.id.btn);
@@ -47,7 +67,7 @@ public class menuPrincipal extends AppCompatActivity implements View.OnClickList
         u = dao.getUsuarioById(id);
 
         nombre.setText(u.getNombre());
-        btnSalir.setOnClickListener(this);
+
 
         final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
@@ -68,11 +88,6 @@ public class menuPrincipal extends AppCompatActivity implements View.OnClickList
             case R.id.textTitleName:
                 //Intent intentTest = new Intent (this, SlashScreen.class);
                 //startActivity(intentTest);
-                break;
-
-            case R.id.textLogOut:
-                Intent iLogOut = new Intent (this, MainActivity.class);
-                startActivity(iLogOut);
                 break;
         }
     }

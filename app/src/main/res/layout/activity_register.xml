@@ -34,7 +34,7 @@
                 android:fontFamily="@font/poppinsbold"
                 android:text="@string/registerPage"
                 android:textAlignment="center"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -122,9 +122,6 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-            <RelativeLayout
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"></RelativeLayout>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -142,11 +139,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rounded_rectangle" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -154,12 +146,8 @@
             android:layout_marginRight="12dp"
             android:fontFamily="@font/poppinsmedium"
             android:text="@string/quitSmoking"
-            android:textSize="17dp" />
+            android:textSize="17sp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rounded_rectangle" />
     </LinearLayout>
 
     <TextView
@@ -171,23 +159,12 @@
         android:onClick="functionUserRegistrado"
         android:text="@string/buttonRegisterUser"
         android:textColor="@color/colorWhite"
-        android:textSize="22dp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.264" />
-
-    <Button
-        android:id="@+id/btnRegCancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CancelarTest"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textRegistro"
-        app:layout_constraintVertical_bias="0.06999999" />
+        app:layout_constraintVertical_bias="0.13999999" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

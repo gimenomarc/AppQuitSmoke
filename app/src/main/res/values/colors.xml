@@ -7,5 +7,6 @@
     <color name="colorPrimaryText">#212121</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorGreen">#32CD32</color>
+    <color name="colorOnClick">#2551EA</color>
 
 </resources>

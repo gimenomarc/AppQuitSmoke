@@ -88,7 +88,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
             android:text="@string/rememberMe" />
 
@@ -98,21 +98,18 @@
             android:layout_weight="1" />
 
         <RelativeLayout
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            >
+            android:layout_width="198dp"
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/btnIniciarSesion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:layout_marginRight="50dp"
-                android:fontFamily="@font/poppinsbold"
+                android:layout_marginEnd="50dp"
                 android:gravity="center"
                 android:text="@string/signIn"
-                android:textColor="#000000"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
 
         </RelativeLayout>
     </LinearLayout>
@@ -129,11 +126,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rounded_rectangle" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -141,12 +133,8 @@
             android:layout_marginRight="12dp"
             android:fontFamily="@font/poppinsmedium"
             android:text="@string/quitSmoking"
-            android:textSize="17dp" />
+            android:textSize="17sp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rounded_rectangle" />
     </LinearLayout>
 
     <LinearLayout
@@ -169,7 +157,7 @@
             android:id="@+id/btnRegistrarse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:fontFamily="@font/poppinsmedium"
             android:onClick="intentTest"
             android:text="@string/register"

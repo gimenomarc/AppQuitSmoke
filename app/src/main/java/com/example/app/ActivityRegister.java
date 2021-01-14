@@ -25,7 +25,6 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
         pass = (EditText) findViewById(R.id.passwordID);
         email = (EditText) findViewById(R.id.emailID);
         reg = (TextView) findViewById(R.id.textRegistrarse);
-        can = (Button) findViewById(R.id.btnRegCancelar);
         reg.setOnClickListener(this);
         can.setOnClickListener(this);
         dao = new daoUsuario(this);
@@ -55,15 +54,8 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
                     finish();
                 } else {
                     Toast.makeText(this, "Usuario ya registrado.", Toast.LENGTH_LONG).show();
-
                 }
-
                 Intent iLog = new Intent (this, menuPrincipal.class);
-                break;
-            case R.id.btnRegCancelar:
-                Intent i = new Intent (this, MainActivity.class);
-                startActivity(i);
-                finish();
                 break;
         }
     }

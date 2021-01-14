@@ -51,5 +51,18 @@
     <string name="verificated">Verified</string>
     <string name="notifications">Notifications</string>
 
+    <!--- MenuPrincipal -->
+    <string name="textChooseTabac">What tabacco do u smoke?</string>
+    <string name="textHowMuchDoUSmoke">How much do you smoke?</string>
+    <string name="btnCalcular">Calculate</string>
+    <string name="textHowMuch">How many cigarettes do you smoke at the day?</string>
+
+
+    <!--- Spinner -->
+
+
+
+
+
 
 </resources>
